@@ -19,8 +19,10 @@
  *
  */
 
+#define _GNU_SOURCE
 #include <errno.h>
 #include <pthread.h>
+#include <sched.h> // Needed for cpu_set_t and CPU_SET macros
 #include <stdbool.h>
 #include <stdio.h>
 #include <string.h>
