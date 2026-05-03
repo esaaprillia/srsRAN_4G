@@ -22,6 +22,16 @@
 #ifndef SRSLOG_STREAM_SINK_H
 #define SRSLOG_STREAM_SINK_H
 
+#include <cstdio> // Or <stdio.h>
+
+#ifdef stdout
+#undef stdout
+#endif
+
+#ifdef stderr
+#undef stderr
+#endif
+
 #include "srsran/srslog/sink.h"
 
 namespace srslog {
