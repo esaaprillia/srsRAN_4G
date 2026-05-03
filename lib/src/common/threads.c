@@ -19,6 +19,7 @@
  *
  */
 
+#define _GNU_SOURCE
 #include <errno.h>
 #include <pthread.h>
 #include <stdbool.h>
