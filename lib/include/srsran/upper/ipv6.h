@@ -25,6 +25,7 @@
 #include <linux/in6.h>
 
 // as of glibc 2.19, the IPv6 issue seems to be fixed https://sourceware.org/bugzilla/show_bug.cgi?id=15850
+#if defined(__GLIBC__) && defined(__GLIBC_PREREQ)
 #if __GLIBC_PREREQ(2, 19)
 #include <linux/ipv6.h>
 #else
