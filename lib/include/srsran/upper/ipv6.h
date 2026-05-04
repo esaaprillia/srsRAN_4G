@@ -23,10 +23,13 @@
 #define SRSRAN_IPV6_H
 
 #include <linux/in6.h>
+#include <netinet/ip6.h>
 
 // as of glibc 2.19, the IPv6 issue seems to be fixed https://sourceware.org/bugzilla/show_bug.cgi?id=15850
+#if defined(__GLIBC__) && defined(__GLIBC_PREREQ)
 #if __GLIBC_PREREQ(2, 19)
 #include <linux/ipv6.h>
+#endif
 #else
 // Some versions of glibc yield to a compile error with gcc
 // complaining about a redefinition of struct in6_pktinfo. See [1].
