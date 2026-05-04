@@ -29,6 +29,8 @@ extern "C" {
 #include <linux/ip.h>
 #include <linux/tcp.h>
 #include <linux/udp.h>
+#include <sys/types.h>
+#include <stdint.h>
 
 namespace srsue {
 
